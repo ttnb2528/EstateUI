@@ -1,8 +1,8 @@
-import Chat from "../../components/chat/Chat.jsx";
-import List from "../../components/list/List.jsx";
+import Chat from "../../components/chat/Chat";
+import List from "../../components/list/List";
 import "./ProfilePage.scss";
 
-const ProfilePage = () => {
+function ProfilePage() {
   return (
     <div className="profilePage">
       <div className="details">
@@ -11,7 +11,6 @@ const ProfilePage = () => {
             <h1>User Information</h1>
             <button>Update Profile</button>
           </div>
-
           <div className="info">
             <span>
               Avatar:
@@ -20,19 +19,20 @@ const ProfilePage = () => {
                 alt=""
               />
             </span>
-
             <span>
-              Username: <b>Ngoc Bich</b>
+              Username: <b>John Doe</b>
             </span>
-
             <span>
-              E-mail: <b>ngocbich2812@gmail.com</b>
+              E-mail: <b>john@gmail.com</b>
             </span>
           </div>
-
           <div className="title">
             <h1>My List</h1>
             <button>Create New Post</button>
+          </div>
+          <List />
+          <div className="title">
+            <h1>Saved List</h1>
           </div>
           <List />
         </div>
@@ -44,6 +44,6 @@ const ProfilePage = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ProfilePage;

@@ -1,11 +1,12 @@
+import { listData } from "../../lib/dummydata";
 import "./ListPage.scss";
-import { listData } from "../../lib/dummydata.js";
-import Filter from "../../components/filter/Filter.jsx";
-import Card from "../../components/card/Card.jsx";
-import Map from "../../components/map/Map.jsx";
+import Filter from "../../components/filter/Filter";
+import Card from "../../components/card/Card";
+import Map from "../../components/map/Map";
 
-const ListPage = () => {
+function ListPage() {
   const data = listData;
+
   return (
     <div className="listPage">
       <div className="listContainer">
@@ -17,10 +18,10 @@ const ListPage = () => {
         </div>
       </div>
       <div className="mapContainer">
-        <Map items={data}/>
+        <Map items={data} />
       </div>
     </div>
   );
-};
+}
 
 export default ListPage;

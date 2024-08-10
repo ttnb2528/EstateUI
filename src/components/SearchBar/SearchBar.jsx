@@ -3,7 +3,7 @@ import "./SearchBar.scss";
 
 const types = ["buy", "rent"];
 
-const SearchBar = () => {
+function SearchBar() {
   const [query, setQuery] = useState({
     type: "buy",
     location: "",
@@ -50,6 +50,6 @@ const SearchBar = () => {
       </form>
     </div>
   );
-};
+}
 
 export default SearchBar;
